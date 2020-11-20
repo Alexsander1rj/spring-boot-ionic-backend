@@ -2,6 +2,7 @@ package com.alexcaetano.cursomc;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -110,6 +111,8 @@ public class CursomcApplication implements CommandLineRunner{
 		enderecoRepository.saveAll(Arrays.asList(e1,e2));
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		
+		sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
 		
 		Pedido ped1 = new Pedido(null, sdf.parse("16/11/2020 12:00"), e1, cli1);
 		Pedido ped2 = new Pedido(null, sdf.parse("16/11/2020 14:30"), e2, cli1);
