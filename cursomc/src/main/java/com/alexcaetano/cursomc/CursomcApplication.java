@@ -112,7 +112,7 @@ public class CursomcApplication implements CommandLineRunner{
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
 		Pedido ped1 = new Pedido(null, sdf.parse("16/11/2020 12:00"), e1, cli1);
-		Pedido ped2 = new Pedido(null, sdf.parse("16/11/2020 12:30"), e2, cli1);
+		Pedido ped2 = new Pedido(null, sdf.parse("16/11/2020 14:30"), e2, cli1);
 		
 		Pagamento pagto1 = new PagamentoComCartao(null, EstadoPagamento.QUITADO, ped1, 6);
 		
